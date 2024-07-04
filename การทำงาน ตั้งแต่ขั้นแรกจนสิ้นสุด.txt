@@ -1,0 +1,43 @@
+การทำงาน ตั้งแต่ขั้นแรกจนสิ้นสุด
+1. สร้างหนังสือ 6 เล่ม
+2. สร้างผู้ใช้งาน 4 คน
+3. ผู้ใช้ยืมทั้งหมด 7 เล่ม
+{"mbid": "M003", "bkid": "9780747532743"},
+{"mbid": "M003", "bkid": "9783806741360"},
+{"mbid": "M001", "bkid": "9780452284241"},
+{"mbid": "M004", "bkid": "9780743273565"},
+{"mbid": "M002", "bkid": "9783806741360"},
+{"mbid": "M001", "bkid": "9783806741360"},
+{"mbid": "M004", "bkid": "9780452284241"},
+4. ผู้ใช้คืนหนังสือ 2 เล่ม {"mbid": "M001", "bkid": "9783806741360"} และ {"mbid": "M003", "bkid": "9783806741360"}
+5. อัพเดทข้อมูลหนังสือ 2 เล่ม
+BK_isbn_update = "9780452284241"; // book ref
+bkUpdate = {"Newtitle": "XXYYZZ", "Newauthor": "abc", "Newcopies": 99};
+
+BK_isbn_update = "9780451524935"; // book ref
+bkUpdate = {"Newtitle": "Big brother", "Newauthor": "Arlong"};
+
+6. อัพเดทข้อมูลสมาชิค 2 คน
+mbUpdate = {"name": "Babyworld"}; // ข้อมูลสำหรับอัพเดท
+MB_ID_update = "M004";
+
+manageMembersSubChoice = 2.2;
+mbUpdate = {"name": "Obox"}; // ข้อมูลสำหรับอัพเดท
+MB_ID_update = "M003";
+
+7.ลบหนังสือ 1 เล่ม 
+BK_isbn_del = "9780452284241"; // book ref
+
+8. เรียกดูรายการหนังสือ
+manageBooksSubChoice = 1.4; // choice selection
+manageBooksMenu(library); 
+
+9. ลบหนังสือ 1 เล่ม
+BK_isbn_del = "9780747532743"; // book ref
+
+10. เรียกดูรายการหนังสือ
+11. ลบสมาชิก 1 คน
+MB_isbn_del = "M004";
+12. เรียกดูรายการสมาชิค
+manageMembersSubChoice = 2.4;
+manageMembersMenu(library);
